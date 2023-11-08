@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <style>
+      .container{
+      
+        text-align: center;
+        
+
+
+
+      }
+      input[type="text"] {width:300px;
+      height:40px}
+      input[type="button"] {
+        width:80px;
+        height:30px
+      }
+      #result{
+            font-size: 24px;
+            height:50px;
+            color:black;
+            border-radius: 1px solid black;
+            margin:0 500px ;
+            width:100%;
+        
+        }
+
+      
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <h1>ToDoList</h1>
+    
+      <input type="text" id="ToDoList">
+      <br> <br>
+      <input type="button" value="Add item"  id="submitBtn" onclick="addToDoList()">
+      <br>  <br>
+    </div>
+    <ul id="result" style="display:none"></ul>
+ <script>
+ function addToDoList(){
+ var inputValue= document.getElementById("ToDoList")
+var result= document.getElementById("result")
+var li= document.createElement("li")
+li.innerHTML= inputValue.value;
+result.style.display="block"
+result.appendChild(li)
+
+ }
+
+    </script>
+    
+</body>
+</html>
